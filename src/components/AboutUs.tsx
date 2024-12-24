@@ -16,7 +16,7 @@ const friends: Friend[] = [
     { name: 'Hamza Badr', email: 'hamza@example.com', phone: '+212 6 00 00 00 02', profileImage: '/user-profile.png' },
     { name: 'Oussama', email: 'oussama@example.com', phone: '+212 6 00 00 00 03', profileImage: '/user-profile.png' },
     { name: 'Wassim', email: 'wassim@example.com', phone: '+212 6 00 00 00 04', profileImage: '/user-profile.png' },
-    { name: 'XX XX', email: 'xx@example.com', phone: '+212 6 00 00 00 05', profileImage: '/user-profile.png' },
+    { name: 'Houssam', email: 'houssam@example.com', phone: '+212 6 00 00 00 05', profileImage: '/user-profile.png' },
 ];
 
 const AboutUs = () => {
