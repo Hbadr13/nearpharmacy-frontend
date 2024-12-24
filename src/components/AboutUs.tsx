@@ -11,12 +11,12 @@ type Friend = {
 };
 
 const friends: Friend[] = [
-    { name: 'Maadani Mohammed', email: 'maadani@example.com', phone: '+212 6 00 00 00 00', profileImage: 'https://via.placeholder.com/150' },
-    { name: 'Mohamed Hamcha', email: 'mohamed@example.com', phone: '+212 6 00 00 00 01', profileImage: 'https://via.placeholder.com/150' },
-    { name: 'Hamza Badr', email: 'hamza@example.com', phone: '+212 6 00 00 00 02', profileImage: 'https://via.placeholder.com/150' },
-    { name: 'Oussama', email: 'oussama@example.com', phone: '+212 6 00 00 00 03', profileImage: 'https://via.placeholder.com/150' },
-    { name: 'Wassim', email: 'wassim@example.com', phone: '+212 6 00 00 00 04', profileImage: 'https://via.placeholder.com/150' },
-    { name: 'XX XX', email: 'xx@example.com', phone: '+212 6 00 00 00 05', profileImage: 'https://via.placeholder.com/150' },
+    { name: 'Maadani Mohammed', email: 'maadani@example.com', phone: '+212 6 00 00 00 00', profileImage: '/user-profile.png' },
+    { name: 'Mohamed Hamcha', email: 'mohamed@example.com', phone: '+212 6 00 00 00 01', profileImage: '/user-profile.png' },
+    { name: 'Hamza Badr', email: 'hamza@example.com', phone: '+212 6 00 00 00 02', profileImage: '/user-profile.png' },
+    { name: 'Oussama', email: 'oussama@example.com', phone: '+212 6 00 00 00 03', profileImage: '/user-profile.png' },
+    { name: 'Wassim', email: 'wassim@example.com', phone: '+212 6 00 00 00 04', profileImage: '/user-profile.png' },
+    { name: 'XX XX', email: 'xx@example.com', phone: '+212 6 00 00 00 05', profileImage: '/user-profile.png' },
 ];
 
 const AboutUs = () => {

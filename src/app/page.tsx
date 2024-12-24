@@ -1,45 +1,44 @@
-"use client"
-import React, { useEffect } from 'react';
-import AboutUs from '@/components/AboutUs';
-import Contact from '@/components/Contact';
-import RecherchePharmacie from '@/components/RecherchePharmacie';
-import Services from '@/components/Services';
+"use client";
+import AboutUs from "@/components/AboutUs";
+import Contact from "@/components/Contact";
+import RecherchePharmacie from "@/components/RecherchePharmacie";
+import Services from "@/components/Services";
+import { useEffect, useRef } from "react";
 
 const Page = () => {
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      const element = document.querySelector(hash);
+  const sections: Record<"home" | "services" | "contact" | "about", React.RefObject<HTMLDivElement | null>> = {
+    home: useRef<HTMLDivElement | null>(null),
+    services: useRef<HTMLDivElement | null>(null),
+    contact: useRef<HTMLDivElement | null>(null),
+    about: useRef<HTMLDivElement | null>(null),
+  };
 
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-        });
+  useEffect(() => {
+    const scrollToSection = () => {
+      const hash = window.location.hash.slice(1) as keyof typeof sections;
+      const section = sections[hash]?.current;
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }
     };
 
-    handleHashChange();
-
-    window.addEventListener('hashchange', handleHashChange);
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange);
-    };
+    scrollToSection();
+    window.addEventListener("hashchange", scrollToSection);
+    return () => window.removeEventListener("hashchange", scrollToSection);
   }, []);
 
   return (
-    <div className='mt-20'>
-      <div id="home">
+    <div className="mt-20">
+      <div ref={sections.home} id="home">
         <RecherchePharmacie />
       </div>
-      <div className='py-20 mt-10' id="services">
+      <div ref={sections.services} id="services" className="py-20 mt-10">
         <Services />
       </div>
-      <div id="contact">
+      <div ref={sections.contact} id="contact">
         <Contact />
       </div>
-      <div id="about">
+      <div ref={sections.about} id="about">
         <AboutUs />
       </div>
     </div>

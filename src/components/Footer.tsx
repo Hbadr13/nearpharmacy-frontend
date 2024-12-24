@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-800 text-gray-200 py-6">
+        <footer className="bg-gray-800 text-gray-200 pt-16  flex flex-col justify-between space-y-44">
             <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
                 {/* Logo et Description */}
                 <Image className="rounded-sm w-24 h-24" src={'/PharmaFinder.png'} width={1000} height={1000} alt="logo" />
