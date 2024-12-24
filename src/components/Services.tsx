@@ -1,5 +1,4 @@
 import { ShoppingCart, Search, Video } from "lucide-react"; // Icônes utilisées pour les services
-import { GrServices } from "react-icons/gr";
 
 import { Clipboard } from "lucide-react";
 const Services = () => {
@@ -24,7 +23,7 @@ const Services = () => {
                         <ShoppingCart className="w-12 h-12 text-green-500 mx-auto mb-4" />
                         <h3 className="text-xl font-semibold text-gray-800">Achat de Médicaments</h3>
                         <p className="text-gray-600 mt-2">
-                            Achetez vos médicaments en ligne directement depuis l'application, avec une livraison rapide à votre porte.
+                            Achetez vos médicaments en ligne directement depuis l&apos;application, avec une livraison rapide à votre porte.
                         </p>
                     </div>
 

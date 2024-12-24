@@ -1,6 +1,7 @@
 import { Users } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react';
-import { FaEnvelope, FaEdit, FaPhoneAlt, FaUserAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaUserAlt } from 'react-icons/fa';
 
 type Friend = {
     name: string;
@@ -28,7 +29,7 @@ const AboutUs = () => {
                 </div>
                 <p className="mt-4 text-lg text-gray-700">
                     Nous sommes 6 amis étudiant à la Faculté Polydisciplinaire de Khouribga, dans le programme
-                    Systèmes d'Information et Intelligence Artificielle (SIIA).
+                    Systèmes d&apos;Information et Intelligence Artificielle (SIIA).
                 </p>
             </div>
 
@@ -38,7 +39,9 @@ const AboutUs = () => {
                         key={index}
                         className="flex flex-col items-center p-6 bg-indigo-100 rounded-lg shadow-lg transition transform hover:scale-105"
                     >
-                        <img
+                        <Image
+                            width={1000}
+                            height={1000}
                             src={friend.profileImage}
                             alt={friend.name}
                             className="w-32 h-32 rounded-full border-4 border-indigo-600 mb-4"

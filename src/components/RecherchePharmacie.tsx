@@ -32,7 +32,6 @@ const villes = [
 const RecherchePharmacie = () => {
     const [typeSelectionné, setTypeSelectionné] = useState<"toutes" | "garde" | null>("toutes");
     const [villeSelectionnée, setVilleSelectionnée] = useState<string>("Casablanca");
-    const [villeUtilisateur, setVilleUtilisateur] = useState<string>("");
 
     const pharmacies = [
         { nom: "Pharmacie A", ville: "Khouribga", garde: true },
@@ -54,7 +53,6 @@ const RecherchePharmacie = () => {
         const récupérerLocalisationUtilisateur = async () => {
             try {
                 const villeUtilisateur = "Khouribga";
-                setVilleUtilisateur(villeUtilisateur);
                 setVilleSelectionnée(villeUtilisateur);
             } catch (erreur) {
                 console.error("Erreur lors de la récupération de la localisation:", erreur);
